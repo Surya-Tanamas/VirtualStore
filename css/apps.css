@@ -1,0 +1,12 @@
+.bg-default { 
+	background: #e9ecef; 
+}
+.navbar-brand {
+	font-size: 1.67rem;
+	font-weight: 600 !important;
+	padding: 0;
+}
+.jumbotron {
+	background: #fff;
+	border-radius: 1rem;
+}
