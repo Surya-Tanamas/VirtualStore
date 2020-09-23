@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Define Apps Title
+define("APP_TITLE", "Virtual Store");
+
+Route::get('/', 'UserController@index');
