@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-define('APP_URL', $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']);
-
-Route::get('/', 'HomeController@index');
+Route::get('/', function () {
+    return view('welcome');
+});
