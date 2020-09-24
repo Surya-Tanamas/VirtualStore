@@ -16,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 // Define Apps Title
 define("APP_TITLE", "Virtual Store");
 
+Route::post('/pesan', 'PostController@pesan');
+Route::post('/{page}', 'PostController@index');
+
+Route::get('/tambah', 'AjaxController@index');
+Route::get('/{page}', 'UserController@index');
 Route::get('/', 'UserController@index');

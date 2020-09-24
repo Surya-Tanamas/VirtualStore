@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cookie;
 
 class UserController extends Controller
 {
@@ -15,6 +16,9 @@ class UserController extends Controller
      */
     public function index( $page = "index" )
     {
+		if( Cookie::get('pesanan') ) {
+			Cookie::queue(Cookie::forget('pesanan'));
+		}
         return view( $page, [
 			"page_title" => "Mulai Memesan",
 			"page" => $page
