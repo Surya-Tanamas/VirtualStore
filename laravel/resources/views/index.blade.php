@@ -19,7 +19,7 @@ use App\Models\stokBarang;
 				<div class="h6 my-1">{{number_format($var->harga, 0, '', '.')}}</div>
 			</div>
 			<div class="col-8 text-center my-auto">
-				<button class="btn btn-sm btn-outline-primary" onclick="tambah(this)" value="{{$var->nama}}">Tambah</button>
+				<button class="btn btn-sm btn-outline-primary" onclick="tambah(this)" value="{{json_encode([$var->nama,$var->harga])}}">Tambah</button>
 			</div>
 		</div>
 	</div>
@@ -33,4 +33,8 @@ use App\Models\stokBarang;
 		<div class="col-sm-6 col-md-3 mx-auto" id="display"></div>
 	</div>
 </div>
+@endsection
+
+@section('jquery')
+<script src="{{ asset('js/index.js') }}"></script>
 @endsection

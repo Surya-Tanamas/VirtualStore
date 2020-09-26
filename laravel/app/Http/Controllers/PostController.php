@@ -15,11 +15,12 @@ class PostController extends Controller
      */
     public function index( Request $request, $page = "index" )
     {
-        return view( $page, [
-			"page_title" => "Mulai Memesan",
+		dd( $request->except('_token') );
+        /*return view( $page, [
+			"page_title" => "POST Request",
 			"request" => $request,
 			"page" => $page
-		]);
+		]);*/
     }
 	
 	/**

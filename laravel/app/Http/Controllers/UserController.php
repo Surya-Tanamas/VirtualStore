@@ -19,7 +19,8 @@ class UserController extends Controller
 		if( Cookie::get('pesanan') ) {
 			Cookie::queue(Cookie::forget('pesanan'));
 		}
-        return view( $page, [
+		
+		return view( $page, [
 			"page_title" => "Mulai Memesan",
 			"page" => $page
 		]);

@@ -13,3 +13,7 @@
 .text-default {
 	color: #808080;
 }
+
+.btn-outline-default {
+	border: 1px solid #d0d0d0;
+}
