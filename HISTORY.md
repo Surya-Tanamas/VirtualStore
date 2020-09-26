@@ -8,3 +8,7 @@ Adalah fitur input "jumlah" di laman "Pesan" yang malah men-trigger kemunculan n
 25 Sep 2020, Surya Tanamas
 
 Penambahan fitur Number-Spinner dari [bootstrap-input-spinner](https://github.com/shaack/bootstrap-input-spinner).
+
+26 Sep 2020, Surya Tanamas
+
+Pembaharuan aplikasi meliputi penambahan file pesan.js yang mengatur perhitungan "total harga" secara otomatis.
