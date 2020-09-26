@@ -22,6 +22,13 @@ Kami telah membuat [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSfSDtg
 yang juga berisi penjelasan tentang tata cara berkolaborasi yang kami tawarkan dan jika teman-teman berminat dengan tawarakan 
 kami, bisa mengisi Google Form tersebut. Dan jangan lupa menggunakan akun GitHub teman-teman ya!
 
+### My Documents dan My Pictures
+
+Sebagai sarana berbagi informasi dan galery tentang aplikasi ini, dengan ini kami memberikan akses terbatas ke
+[Google Drive](https://drive.google.com/drive/folders/1hz_WgvIWXvsJELDIXiQ6D8wFHKkt8csi?usp=sharing) 
+kami kepada para kolaborator yang telah mendapat persetujuan untuk berkolaborasi dalam pembuatan dan pengembangan
+aplikasi ini.
+
 Terima Kasih,
 
 
