@@ -17,6 +17,11 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-default">
 		<div class="container">
 			<a class="navbar-brand" href="{{asset('')}}">{{APP_TITLE}}</a>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="{{ Route('logout') }}">{{ $username ?? 'Login' }}</a>
+				</li>
+			</ul>
 		</div>
 	</nav>
 

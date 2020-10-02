@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Cookie;
 
 class PostController extends Controller
 {
+    protected $name = "Pesanan";
     /**
      * Show the profile for the given user.
      * @return View
@@ -16,28 +17,36 @@ class PostController extends Controller
     public function index( Request $request, $page = "index" )
     {
 		dd( $request->except('_token') );
-        /*return view( $page, [
-			"page_title" => "POST Request",
-			"request" => $request,
-			"page" => $page
-		]);*/
     }
 	
 	/**
      * Show the profile for the given user.
      * @return View
      */
-    public function pesan( Request $request, $page = "pesan" )
+    public function pesan( Request $request )
     {
         if( $request->submit == "Pesan" ) {
-			return view( $page, [
-				"page_title" => "Mulai Memesan",
-				"request" => $request,
-				"page" => $page
-			]);
+			return redirect('pesan');
 		} else {
-			Cookie::queue(Cookie::forget('pesanan'));
+			$request->session()->forget( $this->name );
 			return back();
-		}		
+		}
+    }
+	
+	/**
+     * Show the profile for the given user.
+     * @return View
+     */
+    public function simpan( Request $request )
+    {
+		dd( $request->except("_token") );
+		
+		// Deleting Order Session
+		$request->session()->forget( $this->name );
+		
+		// Saving New Request Data
+		
+		
+		return redirect('selesai');
     }
 }

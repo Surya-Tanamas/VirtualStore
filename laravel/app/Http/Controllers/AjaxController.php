@@ -17,28 +17,28 @@ class AjaxController extends Controller
      */
     public function index( Request $request, $page = "tambah" )
     {
-        $val = $request->val;
-		$name = "pesanan";
-		$mins = 6;
+        $value = $request->item;
+		$name = "Pesanan";
 		
-		if( Cookie::get($name) ){
+		if( $request->session()->has($name) ){
 			//Get Old Array
-			$arrdata = json_decode( Cookie::get($name) );
+			$arrdata = json_decode( session( $name ) );
+			
 			// Add New Data into Array
-			$arrdata[] = $val;
+			$arrdata[] = $value;
 		} else {
 			// Make New Array
-			$arrdata[] = $val;
+			$arrdata[] = $value;
 		}
+		// Filtering same item
+		$arrdata = array_unique( $arrdata );
 		
-		$arrdata = array_unique($arrdata);
-		$value = json_encode($arrdata);
-		Cookie::queue($name, $value, $mins);
+		// Storing data into Session
+		session([ $name => json_encode($arrdata) ]);
 		
 		return view( $page, [
 			"page_title" => "Tambah Pesanan",
-			"value" => $arrdata,
-			"page" => $page
+			"value" => $arrdata
 		]);
     }
 }

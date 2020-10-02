@@ -5,6 +5,6 @@ function tambah( elem ) {
 			document.getElementById("display").innerHTML = this.responseText;
 		}
 	};
-	xhttp.open("GET", "tambah?val=" + elem.value, true);
+	xhttp.open("GET", "tambah?item=" + elem.value, true);
 	xhttp.send();
 }
